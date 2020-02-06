@@ -1,0 +1,1188 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Dec 11 15:17:04 2019
+# Process ID: 10856
+# Current directory: E:/Data/Vivido_FPGA/PROJECT/UART/UART
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26828 E:\Data\Vivido_FPGA\PROJECT\UART\UART\UART.xpr
+# Log file: E:/Data/Vivido_FPGA/PROJECT/UART/UART/vivado.log
+# Journal file: E:/Data/Vivido_FPGA/PROJECT/UART/UART\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 782.129 ; gain = 173.238
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+Finished Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1037.180 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1164.230 ; gain = 376.184
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 15:20:45 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 15:22:44 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 15:49:39 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+Finished Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2172.891 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcsg324-1
+Top: Top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2177.117 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Uart_TX_Control' [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Uart_TX' [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Uart_TX' (1#1) [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:22]
+WARNING: [Synth 8-350] instance 'Uart_TX_Ini' of module 'Uart_TX' requires 7 connections, but only 4 given [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'Uart_TX_Control' (2#1) [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v:22]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v:42]
+INFO: [Synth 8-6157] synthesizing module 'clkdiv' [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:23]
+	Parameter BAUD_DIV bound to: 16'b0010100010110000 
+	Parameter BAUD_DIV_CAP bound to: 16'b0001010001011000 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-350] instance 'Uart_TX_Ini' of module 'Uart_TX' requires 7 connections, but only 1 given [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'clkdiv' (3#1) [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:23]
+WARNING: [Synth 8-350] instance 'clkdiv_ini' of module 'clkdiv' requires 3 connections, but only 2 given [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (4#1) [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2177.117 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:rst_n to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v:110]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uartclk to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v:110]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:clk_100m to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[7] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[6] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[5] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[4] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[3] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[2] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[1] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_data[0] to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:rst_n to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+WARNING: [Synth 8-3295] tying undriven pin Uart_TX_Ini:uart_tx_en to constant 0 [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v:59]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2177.117 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2177.117 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+Finished Parsing XDC File [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/constrs_1/new/Top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+11 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2177.117 ; gain = 0.000
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 16:02:53 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xsim.dir/Top_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Dec 11 16:05:34 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 64.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Wed Dec 11 16:05:34 2019...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2177.117 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx}} 
+run 10 us
+add_force {/Top_tb/clk_100m} -radix hex {10 0ns} {10 50000ps} -repeat_every 100000ps
+ERROR: [Simtcl 6-179] Couldn't add force for the following reason: Illegal value '10': Object size 1 does not match size of given value 10.
+add_force {/Top_tb/clk_100m} -radix bin {1 0ns} {0 50000ps} -repeat_every 100000ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2177.117 ; gain = 0.000
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 16:12:01 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+ERROR: [VRFC 10-2989] 'clk_50m' is not declared [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v:47]
+ERROR: [VRFC 10-2865] module 'Top_tb' ignored due to previous errors [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/send_data}} 
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/uart_tx_start}} 
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 10 us
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/tx_start}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ps
+run 10 ps
+run 10 ps
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/bit_num}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/clkdiv_ini/uartclk}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_send_flag}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/send_data}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/bit_num}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/uart_tx}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/uart_send_flag}} 
+run 10 ms
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/clkdiv_ini/Uart_TX_Ini2/uartclk}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 10 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/test}} 
+run 1 ms
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini1/uartclk}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx}} 
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uartclk}} 
+run 1 ms
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/send_data}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+run 1 ms
+run 1 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/bit_num}} 
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx_en}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clkdiv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.clkdiv
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2177.117 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+export_ip_user_files -of_objects  [get_files E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v] -no_script -reset -force -quiet
+remove_files  E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/clkdiv.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Wed Dec 11 17:17:05 2019] Launched synth_1...
+Run output will be captured here: E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Top_tb_behav -key {Behavioral:sim_1:Functional:Top_tb} -tclbatch {Top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source Top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/send_data}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/bit_num}} 
+run 1 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uartclk}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+run 1 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/cnt}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 10 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 10 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_send_flag}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx_en}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 5 ms
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+ERROR: [VRFC 10-1412] syntax error near always [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:45]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword always used in incorrect context [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:45]
+ERROR: [VRFC 10-1412] syntax error near <= [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:54]
+ERROR: [VRFC 10-1412] syntax error near <= [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:59]
+ERROR: [VRFC 10-1412] syntax error near <= [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:64]
+ERROR: [VRFC 10-2939] 'cnt' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:50]
+ERROR: [VRFC 10-2951] 'cnt' is not a constant [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:52]
+ERROR: [VRFC 10-2939] 'uartclk' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:54]
+ERROR: [VRFC 10-2939] 'cnt' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:55]
+ERROR: [VRFC 10-2951] 'cnt' is not a constant [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:57]
+ERROR: [VRFC 10-2939] 'uartclk' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:59]
+ERROR: [VRFC 10-2939] 'cnt' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:60]
+ERROR: [VRFC 10-2939] 'cnt' is an unknown type [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:64]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register uart_tx is not permitted, left-hand side should be reg/integer/time/genvar [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:94]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register uart_tx is not permitted, left-hand side should be reg/integer/time/genvar [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:114]
+ERROR: [VRFC 10-2865] module 'Uart_TX' ignored due to previous errors [E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v:22]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_TX_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Uart_TX_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.srcs/sim_1/new/Top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Data/Vivido_FPGA/PROJECT/UART/UART/UART.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 261bb26d317741558c415c227be94fe0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Top_tb_behav xil_defaultlib.Top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Uart_TX
+Compiling module xil_defaultlib.Uart_TX_Control
+Compiling module xil_defaultlib.Top
+Compiling module xil_defaultlib.Top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2177.117 ; gain = 0.000
+run 5 ms
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Top_tb/Top_Ini/Uart_TX_Control_Ini/Uart_TX_Ini/uart_tx_r}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 5 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 5 ms
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 18:07:07 2019...
