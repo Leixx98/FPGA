@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivado_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_RX.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Uart_RX
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Data/Vivado_FPGA/PROJECT/UART/UART/UART.srcs/sources_1/new/Uart_RX_Control.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Uart_RX_Control
