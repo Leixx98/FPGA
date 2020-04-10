@@ -28,7 +28,7 @@ module fft(
     output [9:0]trans_cnt,
     input sample_done,
     input signed [10:0]adc_data,     //输入ADC数据
-    output [31:0]fft_data      //输出FFT数据
+    output [23:0]fft_data      //输出FFT数据
     );
 
 //常数定义
@@ -42,6 +42,7 @@ reg [8:0]wndatareal_addr=0; //旋转因子实部查表地址
 reg [8:0]wndataimg_addr=0;   //旋转因子虚部查表地址
 reg sample_begin_r;
 reg trans_begin_r;
+reg [23:0]fft_data_r;
 
 
 reg signed [23:0] input_data [0:N-1];  //原始输入数据,最高位为符号位
@@ -791,7 +792,33 @@ always@(posedge clk_100m or negedge rst_n) begin
                         data_cnt <= 0;                        
                     end
                 end                  
-            end      
+            end  
+            5'd23:begin                           //对fft数据取模，得到真实的幅度数据
+                if(dft_tenoutreal[data_cnt][23])begin     //取绝对值，负数
+                    cache_real = ~dft_tenoutreal[data_cnt];
+                    cache_real = cache_real+1'b1;         //两个式子合并在一起就不行，为什么？
+                    if(!data_cnt)begin
+                        fft_data_r = cache_real>>10;
+                    end             //直流量与幅度是N倍关系
+                    else begin
+                        fft_data_r = cache_real>>9;     
+                    end             //非直流量与幅度是N/2倍关系
+                end 
+                else begin          //正数
+                    cache_real = dft_tenoutreal[data_cnt];
+                    if(!data_cnt)begin
+                        fft_data_r = cache_real>>10;
+                    end             //直流量与幅度是N倍关系
+                    else begin
+                        fft_data_r = cache_real>>9;     
+                    end             //非直流量与幅度是N/2倍关系                    
+                end  
+                data_cnt = data_cnt+1; 
+                if(data_cnt==11'd1024)begin
+                    data_cnt <= 0;
+                    state <= state+1'b1;
+                end
+            end    
             default:begin state <= 5'd1; cal_stage <= 1;fft_stage <= 1; data_cnt <= 0; end
         endcase
     end
@@ -800,6 +827,7 @@ end
 assign trans_cnt = data_cnt;      //传输数据由FFT模块控制
 assign sample_begin = sample_begin_r;
 assign trans_begin = trans_begin_r;
+assign fft_data = fft_data_r;
 
 blk_mem_gen_0 blk_mem_gen_0_ini(
     .clka(clk_100m),

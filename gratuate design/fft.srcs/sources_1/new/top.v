@@ -29,13 +29,20 @@ module top(
     input uart_rx
     );
 
-wire [31:0]fft_data;
+wire [23:0]fft_data;
 wire clk_30m;
 wire sample_begin;
 wire trans_begin;
 wire sample_done;
 wire [9:0]trans_cnt;
 wire [10:0]adc_data;
+wire [7:0]data_output;
+wire tx_start_sig;
+wire uart_tx_signal;
+wire data_input;
+wire sw_start_sig;
+wire rx_sig;
+
 
 fft fft_ini(
     .clk_100m(clk_100m),
@@ -66,7 +73,7 @@ Uart_TX_Control Uart_TX_Control_Ini
     .rst_n(rst_n),
     .uart_data_txwait(data_output),
     .uart_tx_start(tx_start_sig),
-    .uart_tx_signal(tx_sig),
+    .uart_tx_signal(uart_tx_signal),
     .uart_tx(uart_tx)
 );
 
