@@ -26,7 +26,8 @@ module top(
     output  uart_tx,
     ////////ADC0///////////////
     output ADC0_CLK,
-    input [9:0]ADC0_D
+    input [9:0]ADC0_D,
+    input [15:0]adc_data
     );
 
 //------------采样率控制------------------//
@@ -56,7 +57,7 @@ fft_ctrl                FFT_Ctrl_inst(
     .clk_100m               (clk_100m),
 	.rst_n                  (rst_n),
     .clk_10m                (clk_10m),
-	.data_in                (ad_data),
+	.data_in                (adc_data),
 	.data_out_re            (data_out_re),
     .data_out_im            (data_out_im),
 	.m_axis_data_tlast     (m_axis_data_tlast)

@@ -34,7 +34,7 @@ parameter fft_point = 16'd4096;		//FFT运算点数
 
 //--------------接口信号--------------//
 reg 	[31:0]	s_axis_data_tdata;
-reg 	[15:0]	s_axis_config_tdata = 16'b00_00_00_10_11_10_11_00;
+reg 	[15:0]	s_axis_config_tdata = 16'b0101_1001_0100_1100;
 reg 	s_axis_config_tvalid;
 reg 	s_axis_data_tvalid;
 reg 	s_axis_data_tlast;
@@ -42,9 +42,9 @@ reg 	s_axis_data_tlast;
 wire 	s_axis_config_tready;
 wire 	s_axis_data_tready;
 wire	[15:0]m_axis_data_tuser;
-//wire 	m_axis_data_tvalid;
+wire 	m_axis_data_tvalid;
 wire 	[31:0]	m_axis_data_tdata;
-wire 	m_axis_data_tlast;
+//wire 	m_axis_data_tlast;
 reg 	m_axis_data_tready = 1;
 wire 	event_frame_started;
 wire 	event_tlast_unexpected;
@@ -76,69 +76,20 @@ always @(posedge clk_10m or negedge rst_n) begin
 	end
 end
 //------------设置数据通道-------------//
-wire 	data_tready_pose;
-wire 	data_tready_nege;
-reg		data_tready_r0;
-reg		data_tready_r1;
-reg		data_tready_r2;
-reg		[15:0]	cnt;
-reg		cnt_en;
+reg		[11:0]	cnt;
 
-/*检测s_axis_data_tready上下沿*/
-always @(posedge clk_10m or negedge rst_n) begin
-	if(!rst_n)	begin
-		data_tready_r0 <= 0;
-		data_tready_r1 <= 0;
-		data_tready_r2 <= 0;
-	end
-	else	begin
-		data_tready_r0 <= s_axis_data_tready;
-		data_tready_r1 <= data_tready_r0;
-		data_tready_r2 <= data_tready_r1;
-	end
-end
-assign	data_tready_pose = data_tready_r1 & !data_tready_r2;
-assign	data_tready_nege = !data_tready_r1 & data_tready_r2;
-/*设置tvalid信号*/
-always @(posedge clk_10m or negedge rst_n) begin
-	if(!rst_n)	begin
-		s_axis_data_tvalid <= 0;
-	end
-	else if(data_tready_nege)	begin
-		s_axis_data_tvalid <= 0;
-	end
-	else if(data_tready_pose)	begin
-		s_axis_data_tvalid <= 1;
-	end
-	else	begin
-		s_axis_data_tvalid <= s_axis_data_tvalid;
-	end
-end
-/*设置tlast信号*/
-always @(posedge clk_10m or negedge rst_n) begin
-	if(!rst_n)	begin
-		cnt_en <= 0;
-	end
-	else if(data_tready_nege)	begin
-		cnt_en <= 0;
-	end
-	else if(data_tready_pose)	begin
-		cnt_en <= 1;
-	end
-    else if(cnt == fft_point-1) begin		//FFT运算点数
-        cnt_en <= 0;
-    end
-end
 always @(posedge clk_10m or negedge rst_n) begin
 	if(!rst_n)	begin
 		cnt <= 0;
+		s_axis_data_tvalid <= 0;
 	end
-	else if(cnt_en)	begin
+	else if(s_axis_data_tready)	begin
+		s_axis_data_tvalid <= 1;
 		cnt <= cnt + 1;
 	end
-	else	begin
+	else  begin
 		cnt <= 0;
-	end
+	end	
 end
 always @(posedge clk_10m or negedge rst_n) begin
 	if(!rst_n)	begin
@@ -177,7 +128,7 @@ xfft_0									FFT_inst(
   	.event_tlast_missing			(event_tlast_missing		),
   	.event_data_in_channel_halt		(event_data_in_channel_halt	),
 	.event_data_out_channel_halt	(event_data_out_channel_halt),
-	.event_status_channel_halt		(event_status_channel_halt)
+	.event_status_channel_halt		(event_status_channel_halt	)
 );
 //------------------将实部和虚部分开-----------------//
 reg  [15:0]	data_out_im_r;
@@ -185,7 +136,6 @@ reg  [15:0]	data_out_re_r;
 always @(posedge clk_10m or negedge rst_n) begin
 	if(!rst_n)	begin
 		data_out_re_r <= 0;
-		fft_cnt <= 0;
 	end
     else if(m_axis_data_tdata[15] == 0)  begin
         data_out_re_r <= m_axis_data_tdata[15:0];
@@ -197,9 +147,10 @@ always @(posedge clk_10m or negedge rst_n) begin
         data_out_re_r <= data_out_re_r;
     end
 end
+
 always @(posedge clk_10m or negedge rst_n) begin
     if(!rst_n)begin
-		data_out_im_r <= 0;
+    	data_out_im_r <= 0;
     end
     else if(m_axis_data_tdata[31] == 0)  begin
         data_out_im_r <= m_axis_data_tdata[31:16];
@@ -211,17 +162,6 @@ always @(posedge clk_10m or negedge rst_n) begin
 		data_out_im_r <= data_out_im_r;
 	end
 end
-
-reg [15:0]fft_cnt;
-always @(posedge clk_10m or negedge rst_n) begin
-	if(!rst_n)begin
-		fft_cnt <= 0;
-	end
-	else if(m_axis_data_tvalid)begin
-		fft_cnt <= fft_cnt+1'b1;
-	end
-end
-
 //-----------------------------//
 assign	data_out_im = data_out_im_r;
 assign	data_out_re = data_out_re_r;

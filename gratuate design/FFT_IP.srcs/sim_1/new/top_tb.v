@@ -27,7 +27,7 @@ module top_tb(
 reg 	sclk;
 reg		rst_n;
 wire 	uart_tx;
-reg  	[9:0]ADC0_D;
+wire  	[9:0]ADC0_D;
 wire 	ADC0_CLK;
 
 //--------------------------//
@@ -44,17 +44,18 @@ end
 parameter data_num = 16'd4096;
 //integer   i = 0;
 reg	[15:0]	i = 0;
-reg [9:0]  data_men[1:data_num];
+reg [15:0]  data_men[1:data_num];
+reg [15:0]  data_in;
 initial begin
     $readmemb("E:/Data/Vivado_FPGA/PROJECT/FFT_IP/FFT_IP.srcs/sources_1/new/sin_test.txt",data_men);
 end
 always @(posedge sclk) begin
 	if(i == data_num)	begin
 		i <= 1;
-		ADC0_D <= data_men[i];
+		data_in <= data_men[i];
 	end
 	else	begin
-	    ADC0_D <= data_men[i];
+	    data_in <= data_men[i];
 	    i <= i + 1;
 	end
 end
@@ -64,7 +65,8 @@ top				        top_inst(
 	.rst_n				(rst_n),
 	.uart_tx			(uart_tx),
 	.ADC0_D				(ADC0_D),
-	.ADC0_CLK			(ADC0_CLK)
+	.ADC0_CLK			(ADC0_CLK),
+	.adc_data			(data_in)
 );
 
 endmodule
