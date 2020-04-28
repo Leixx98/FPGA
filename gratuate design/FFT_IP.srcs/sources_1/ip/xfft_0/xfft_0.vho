@@ -63,16 +63,16 @@ COMPONENT xfft_0
     s_axis_data_tready : OUT STD_LOGIC;
     s_axis_data_tlast : IN STD_LOGIC;
     m_axis_data_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    m_axis_data_tuser : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    m_axis_data_tuser : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     m_axis_data_tvalid : OUT STD_LOGIC;
+    m_axis_data_tready : IN STD_LOGIC;
     m_axis_data_tlast : OUT STD_LOGIC;
-    m_axis_status_tdata : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    m_axis_status_tvalid : OUT STD_LOGIC;
     event_frame_started : OUT STD_LOGIC;
     event_tlast_unexpected : OUT STD_LOGIC;
     event_tlast_missing : OUT STD_LOGIC;
-    event_fft_overflow : OUT STD_LOGIC;
-    event_data_in_channel_halt : OUT STD_LOGIC
+    event_status_channel_halt : OUT STD_LOGIC;
+    event_data_in_channel_halt : OUT STD_LOGIC;
+    event_data_out_channel_halt : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -94,14 +94,14 @@ your_instance_name : xfft_0
     m_axis_data_tdata => m_axis_data_tdata,
     m_axis_data_tuser => m_axis_data_tuser,
     m_axis_data_tvalid => m_axis_data_tvalid,
+    m_axis_data_tready => m_axis_data_tready,
     m_axis_data_tlast => m_axis_data_tlast,
-    m_axis_status_tdata => m_axis_status_tdata,
-    m_axis_status_tvalid => m_axis_status_tvalid,
     event_frame_started => event_frame_started,
     event_tlast_unexpected => event_tlast_unexpected,
     event_tlast_missing => event_tlast_missing,
-    event_fft_overflow => event_fft_overflow,
-    event_data_in_channel_halt => event_data_in_channel_halt
+    event_status_channel_halt => event_status_channel_halt,
+    event_data_in_channel_halt => event_data_in_channel_halt,
+    event_data_out_channel_halt => event_data_out_channel_halt
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -21,14 +21,16 @@
 
 
 module clk_ctrl(
-    input clk,
-    output clk_fft
+    input clk_100m,
+    output clk_30m,
+    output clk_10m
     );
 
 //-------------clk ip-------------------//
 clk_wiz_0      clk_wiz_0_inst(
-	.clk_in1				(clk),
-	.clk_out1				(clk_fft)
+	.clk_in1				(clk_100m),
+	.clk_out1				(clk_30m),
+    .clk_out2               (clk_10m)
 );
 
 endmodule
